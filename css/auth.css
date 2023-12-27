@@ -1,0 +1,213 @@
+@import url('https://rsms.me/inter/inter-ui.css');
+::selection {
+  background: #2D2F36;
+}
+::-webkit-selection {
+  background: #2D2F36;
+}
+::-moz-selection {
+  background: #2D2F36;
+}
+
+:root{
+  --green: #5AD275;
+}
+body {
+  background: white;
+  font-family: 'Inter UI', sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+header {
+  color: white;
+  padding: 10px 0;
+  /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); */
+  position: relative;
+}
+
+.container-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  /* z-index: 1; */
+}
+
+.logo{
+  max-width: 80px;
+  height: auto;
+  margin-right: 60px;
+  margin-bottom: -60px;
+}
+
+.container-head p{
+  position: fixed;
+  margin-left: 90px;
+  margin-top: 80px;
+  font-size: 20px;
+  color: #222; 
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 80px);
+  position: absolute;
+  place-content: center;
+  width: calc(100% - 40px);
+}
+.container {
+  display: flex;
+  height: 320px;
+  margin: 0 auto;
+  width: 640px;
+}
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+    height: 630px;
+    width: 320px;
+  }
+}
+.left {
+  background: var(--green);
+  top: 0;
+  position: relative;
+  width: 50%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  z-index: -1;
+}
+@media (max-width: 767px) {
+  .left {
+    height: 100%;
+    left: 20px;
+    width: calc(100% - 40px);
+    max-height: 270px;
+  }
+}
+.login {
+  font-size: 50px;
+  font-weight: 900;
+  margin: 50px 40px 40px;
+}
+.eula {
+  color: #999;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 40px;
+}
+.right {
+  background: #F9F9F9;
+  /* box-shadow: 0px 0px 40px 16px rgba(0,0,0,0.22); */
+  color: #F1F1F2;
+  position: relative;
+  width: 100%;
+  /* height: 300px; */
+  left: -20px;
+  border-radius: 20px;
+  z-index: 1;
+
+}
+@media (max-width: 767px) {
+  .right {
+    flex-shrink: 0;
+    height: 100%;
+    width: 100%;
+    max-height: 350px;
+  }
+}
+svg {
+  position: absolute;
+  width: 320px;
+}
+path {
+  fill: none;
+  stroke: url(#linearGradient);;
+  stroke-width: 4;
+  stroke-dasharray: 240 1386;
+}
+.form {
+  /* padding: 0s; */
+  margin: 20px 40px 0 40px;
+  position: absolute;
+}
+.form h3{
+  text-align: center;
+  color: var(--green);
+}
+.btn-login{
+  border: 0;
+  background: var(--green);
+  color: #fff;
+  font-size: 18px;
+  height: 30px;
+  outline: none !important;
+  width: 50%;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+label {
+  color:  #c2c2c5;
+  display: block;
+  font-size: 14px;
+  height: 16px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+input {
+  /* background: transparent; */
+  margin-top: 20px;
+  border: 0;
+  padding-left: 20px;
+  color: #222;
+  font-size: 18px;
+  height: 30px;
+  outline: none !important;
+  width: 100%;
+  border-radius: 10px;
+}
+input::-moz-focus-inner { 
+  border: 0; 
+}
+#submit {
+  color: #707075;
+  margin-top: 40px;
+  transition: color 300ms;
+}
+#submit:focus {
+  color: #f2f2f2;
+}
+#submit:active {
+  color: #d0d0d2;
+}
+
+.login__check, 
+.login__check-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login__check {
+  margin-bottom: 1rem;
+  font-size: var(--small-font-size);
+}
+
+.login__check-box {
+  column-gap: .5rem;
+}
+
+.login__check-input {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--white-color);
+}
+
+.login__forgot {
+  color: #222;
+}
+
+.login__forgot:hover {
+  text-decoration: underline;
+}
